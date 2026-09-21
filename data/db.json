@@ -1,0 +1,46 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "imageUrl": "https://m.media-amazon.com/images/I/71BBZXPRu3L.jpg",
+      "cost": 400,
+      "name": "red car"
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://m.media-amazon.com/images/I/71BBZXPRu3L.jpg",
+      "cost": 300,
+      "name": "black panter"
+    },
+    {
+      "id": 3,
+      "imageUrl": "https://m.media-amazon.com/images/I/71BBZXPRu3L.jpg",
+      "cost": 600,
+      "name": "cute rabbit"
+    },
+    {
+      "id": 4,
+      "imageUrl": "https://m.media-amazon.com/images/I/71BBZXPRu3L.jpg",
+      "cost": 900,
+      "name": "best toy"
+    },
+    {
+      "id": 5,
+      "imageUrl": "https://m.media-amazon.com/images/I/71BBZXPRu3L.jpg",
+      "cost": 453500,
+      "name": "mehdikhaste"
+    },
+    {
+      "id": 6,
+      "imageUrl": "https://m.media-amazon.com/images/I/71BBZXPRu3L.jpg",
+      "cost": 564400,
+      "name": "sunni"
+    },
+    {
+      "id": 7,
+      "imageUrl": "https://m.media-amazon.com/images/I/71BBZXPRu3L.jpg",
+      "cost": 678,
+      "name": "product 7"
+    }
+  ]
+}

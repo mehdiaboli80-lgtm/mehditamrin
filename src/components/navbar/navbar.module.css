@@ -1,0 +1,176 @@
+/* ======================== */
+/*   استایل‌های پایه        */
+/* ======================== */
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  direction: rtl;
+  padding: 12px 30px;
+}
+
+/* ===== هدر نوبار (شامل لوگو و دکمه همبرگر) ===== */
+.navHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo a {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0057ff;
+  text-decoration: none;
+}
+
+/* ===== دکمه همبرگر ===== */
+.hamburger {
+  display: none; /* در دسکتاپ مخفی باشه */
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.bar {
+  width: 28px;
+  height: 3px;
+  background: #1c1c1e;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+/* ===== منو ===== */
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  align-items: center;
+  padding: 0;
+  transition: all 0.3s ease;
+  justify-content: end;
+  margin: 0;
+  padding: 14px 16px 16px;
+ 
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #1c1c1e;
+  font-weight: 500;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.navLinks a:hover {
+  color: #0057ff;
+}
+
+/* ===== دکمه‌های ورود/خروج ===== */
+.loginBtn,
+.logoutBtn {
+  background: #0057ff;
+  color: white;
+  border: none;
+  padding: 6px 20px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.loginBtn:hover {
+  background: #0044cc;
+  transform: scale(1.04);
+}
+
+.logoutBtn {
+  background: #e74c3c;
+}
+
+.logoutBtn:hover {
+  background: #c0392b;
+  transform: scale(1.04);
+}
+
+/* =========================================== */
+/* ✅ MEDIA QUERY برای موبایل (عرض تا 768px)  */
+/* =========================================== */
+/* =========================================== */
+/* ✅ MEDIA QUERY برای موبایل (عرض تا 768px)  */
+/* =========================================== */
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    padding: 12px 16px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navLinks {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    padding: 0 16px;
+    border-top: 1px solid #f0f0f0;
+    margin-top: 0;
+    max-height: 0;           /* ← بسته: ارتفاع صفر */
+    opacity: 0;              /* ← بسته: شفافیت صفر */
+    overflow: hidden;        /* ← محتوا بیرون نزنه */
+    transform: translateY(-10px); /* ← بسته: کمی بالا */
+    transition: all 0.4s ease-in-out; /* ← انیمیشن نرم */
+  }
+
+  .navLinks.open {
+    max-height: 400px;       /* ← باز: ارتفاع کافی */
+    opacity: 1;              /* ← باز: کاملاً واضح */
+    transform: translateY(0); /* ← باز: سر جای خودش */
+    padding: 16px;
+    margin-top: 12px;
+  }
+
+  .navLinks li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navLinks a {
+    display: block;
+    padding: 8px 0;
+    font-size: 16px;
+  }
+
+  .loginBtn,
+  .logoutBtn {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    text-align: center;
+  }
+}
+/* =========================================== */
+/* ✅ انیمیشن تبدیل همبرگر به X (اختیاری)    */
+/* =========================================== */
+
+/* وقتی منو باز باشه، دکمه همبرگر به شکل X درمیاد */
+.navbar .hamburger.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.navbar .hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar .hamburger.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
