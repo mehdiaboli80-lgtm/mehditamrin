@@ -28,11 +28,7 @@ function Home() {
   }, []);
 
   
-  const indexOfLastPost = currentPage * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = allPosts.slice(indexOfFirstPost, indexOfLastPost);
-
-  const totalPages = Math.ceil(allPosts.length / postsPerPage);
+  
 
   
   const nextPage = () => {
@@ -129,7 +125,7 @@ function Home() {
 
 
 
-  
+
 }
 
 export default Home;
